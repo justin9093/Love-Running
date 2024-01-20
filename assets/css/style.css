@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     /*generic project style*/
     color: #3a3a3a;
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
 } 
 
 
@@ -24,7 +24,7 @@ body{
 header{
     background-color: #ffffff;
     padding: 0 1rem;
-    padding: fixed;
+    position: fixed;
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
@@ -89,4 +89,40 @@ main{
 /*Footer*/
 footer{
     background-color: orange;
+}
+/*media query tablets or larger*/
+@media screen and (min-width: 768px) {
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu{
+        display: flex;
+    }
+    #menu > li{
+        padding-left: 1rem;
+    }
+    .nav-toggle-label{
+        display: none;
+    }
+    #logo{
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+    /*main content*/
+    main{
+        /*push main content down*/
+        margin-top: 79px;
+    }
+}
+
+/*larger devices*/
+@media screen and (min-width: 992){
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
+    }    
 }
