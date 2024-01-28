@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Oswald:wght@700&display=swap');
 
 /*astrik wildcard selector to overide defult styles to the browser*/
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,15 +10,18 @@
 
 
 /*general style*/
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     /*generic project style*/
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
-} 
-h1, h2, h3 {
+}
+
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -26,7 +29,7 @@ h1, h2, h3 {
 }
 
 /*Header*/
-header{
+header {
     background-color: #ffffff;
     padding: 0 1rem;
     position: fixed;
@@ -37,6 +40,7 @@ header{
     justify-content: space-between;
     align-items: baseline;
 }
+
 header a {
     text-decoration: none;
     color: inherit;
@@ -44,30 +48,35 @@ header a {
 }
 
 
-#menu{
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu > li{
+
+#menu>li {
     margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
 /*nav toggle*/
-#nav-toggle:checked~nav{
+#nav-toggle:checked~nav {
     display: block;
 }
-#nav-toggle{
+
+#nav-toggle {
     display: none;
 }
-.nav-toggle-label{
+
+.nav-toggle-label {
     font-size: 2rem;
 }
 
 /*navbar styles with  downdrop toggle*/
-nav{
+nav {
     position: absolute;
     background-color: #ffffff;
     width: 100%;
@@ -79,22 +88,23 @@ nav{
 }
 
 /*main content*/
-main{
+main {
     /*main element take up surplus space*/
     flex: 1 0 auto;
     margin-top: 47px;
 }
 
 /*hero picture*/
-#hero{
+#hero {
     height: 600px;
     width: 100%;
     background: url(../images/hero-image.webp) no-repeat center center/cover;
+    position: relative;
 }
 
 
-#cover-text{
-    background-color: rgba(241, 109, 107, 7);
+#cover-text {
+    background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
     bottom: 30px;
@@ -103,19 +113,49 @@ main{
     padding-top: 40px;
     padding-left: 10px;
 }
-#cover-text > h2 #cover-text > h3 {
+
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
 
+/* Reasons section */
+#reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reasons h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+
+#benefits-physical>div,
+#benefits-mental>div {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
 /*Footer*/
-#social-networks{
+#social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
 }
-#social-networks i{
+
+#social-networks i {
     font-size: 150%;
     padding: 5%;
     color: #3a3a3a;
@@ -130,34 +170,40 @@ main{
         width: fit-content;
         padding-right: 1rem;
     }
-    #menu{
+
+    #menu {
         display: flex;
     }
-    #menu > li{
+
+    #menu>li {
         padding-left: 1rem;
     }
-    .nav-toggle-label{
+
+    .nav-toggle-label {
         display: none;
     }
-    #logo{
+
+    #logo {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
+
     /*main content*/
-    main{
+    main {
         /*push main content down*/
         margin-top: 79px;
     }
-    #cover-text{
+
+    #cover-text {
         width: 300px;
         right: 50px;
     }
 }
 
 /*larger devices*/
-@media screen and (min-width: 992){
-    #menu a:hover{
+@media screen and (min-width: 992) {
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
-    }    
+    }
 }
