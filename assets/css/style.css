@@ -66,6 +66,18 @@ header a {
     border-bottom: 1px solid #3a3a3a;
 }
 
+/*navbar styles with  downdrop toggle*/
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
 /*nav toggle*/
 #nav-toggle:checked~nav {
     display: block;
@@ -79,17 +91,6 @@ header a {
     font-size: 2rem;
 }
 
-/*navbar styles with  downdrop toggle*/
-nav {
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    left: 0;
-    padding: 0 1rem;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    top: 100%;
-}
 
 /*main content*/
 main {
@@ -123,23 +124,7 @@ main {
     color: #ffffff;
 }
 
-/* Reasons section */
-#benefits-physical,
-#benefits-mental {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#benefits-physical>div,
-#benefits-mental>div {
-    width: 75%;
-}
-
-#benefits-mental>div {
-    text-align: end;
-    align-self: flex-end;
-}
+/*reasons section*/
 
 #reasons {
     width: 90%;
@@ -168,9 +153,9 @@ main {
 }
 
 #circle-cover-bg {
-    background: url('../images/reasons-image.webp') no-repeat top center/cover;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
-    width: 90wv;
+    width: 90vw;
     margin-bottom: 20px;
     /*makes into circle*/
     border-radius: 50%;
@@ -184,30 +169,6 @@ main {
     justify-content: center;
 }
 
-#benefits {
-    display: flex;
-    flex-direction: row;
-}
-
-#benefits>div {
-    flex: 1;
-}
-
-#benefits-image {
-    order: 0;
-}
-
-#benefits-mental {
-    order: 1;
-}
-
-#benefits-mental>div {
-    align-self: flex-start;
-}
-
-#benefits-physical>div {
-    align-self: flex-end;
-}
 
 /*meet up times section*/
 #times {
@@ -244,7 +205,7 @@ main {
 }
 
 #social-networks i {
-    font-size: 150%;
+    font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
 }
@@ -287,11 +248,57 @@ main {
         width: 300px;
         right: 50px;
     }
+
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
+    }
 }
 
 /*larger devices*/
-@media screen and (min-width: 992) {
+@media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0;
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical>div {
+        align-self: flex-end;
     }
 }
