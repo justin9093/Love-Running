@@ -195,6 +195,12 @@ main {
     color: #fafafa;
 }
 
+/* gallery page */
+
+#photos img {
+    width: 100%;
+}
+
 /*Footer*/
 #social-networks {
     text-align: center;
